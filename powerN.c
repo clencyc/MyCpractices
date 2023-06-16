@@ -3,22 +3,24 @@
 int power(int n1, int n2);
 
 int main(){
-    int base, exp;
+    int base, a, result;
 
     printf("Enter base number:");
     scanf("%d", &base);
 
-    printf("Enter power number (positive integer);");
-    scanf("%d", &exp);
+    printf("Enter power of a number:");
+    scanf("%d", &a);
 
-    printf("%d^%d = %d", base, exp, power(base, exp));
+    result = power(base, a);
+
+    printf("%d ^ %d = %d", base, a, result);
+
     return 0;
-
 }
 
-int power(int base, int exp)
-{
-    if (exp!=1)
-    return (base*power(base,exp-1));
-    
+int power(int base, int a){
+    if (a != 0)
+    return (base * power(base, a - 1));
+    else
+    return 1;
 }
