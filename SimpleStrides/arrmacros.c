@@ -2,6 +2,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/**
+ * macros enable better readability in code
+*/
 #define SIZE 5
 #define PRODUCT(X, Y) X * Y
 
